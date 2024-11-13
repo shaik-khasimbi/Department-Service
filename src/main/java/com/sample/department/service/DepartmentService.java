@@ -12,10 +12,12 @@ public class DepartmentService {
 	@Autowired
 	private DepartmentRepostiory departmentRepostiory;
 
+
 	public Department saveDepartment(Department department) {
 		System.out.println("name :"+ department.getDepartmentName());
 		return departmentRepostiory.save(department);
 	}
+
 
 	public Department findDepartmentById(long departmentId) {
 		return departmentRepostiory.findByDepartmentId(departmentId);
